@@ -1,18 +1,14 @@
 package com.xaehu.myapplication.presenter;
 
+import com.xaehu.mvp_library.api.Api;
+import com.xaehu.mvp_library.base.BaseConstant;
+import com.xaehu.mvp_library.base.BasePresenter;
+import com.xaehu.mvp_library.bean.KugouSearch;
 import com.xaehu.myapplication.activity.SearchActivity;
-import com.xaehu.myapplication.api.Api;
-import com.xaehu.myapplication.base.BaseConstant;
-import com.xaehu.myapplication.base.BasePresenter;
-import com.xaehu.myapplication.bean.KugouSearch;
 
 import java.util.HashMap;
 import java.util.Map;
 
-import io.reactivex.Observer;
-import io.reactivex.android.schedulers.AndroidSchedulers;
-import io.reactivex.disposables.Disposable;
-import io.reactivex.schedulers.Schedulers;
 
 public class SearchPresenter extends BasePresenter<SearchActivity> {
 

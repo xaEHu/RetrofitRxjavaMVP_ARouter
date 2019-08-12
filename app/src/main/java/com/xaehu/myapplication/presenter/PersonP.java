@@ -1,6 +1,6 @@
 package com.xaehu.myapplication.presenter;
 
-import com.xaehu.myapplication.base.BasePresenter;
+import com.xaehu.mvp_library.base.BasePresenter;
 import com.xaehu.myapplication.fragment.PersonFragment;
 
 /**

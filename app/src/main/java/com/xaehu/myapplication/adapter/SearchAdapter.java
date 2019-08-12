@@ -2,11 +2,10 @@ package com.xaehu.myapplication.adapter;
 
 import android.support.annotation.Nullable;
 
-import com.chad.library.adapter.base.BaseItemDraggableAdapter;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
+import com.xaehu.mvp_library.bean.KugouSearch;
 import com.xaehu.myapplication.R;
-import com.xaehu.myapplication.bean.KugouSearch;
 
 import java.util.List;
 

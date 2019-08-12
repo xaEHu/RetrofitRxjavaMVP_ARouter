@@ -8,14 +8,13 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
+import com.xaehu.mvp_library.base.BaseConstant;
+import com.xaehu.mvp_library.base.BaseFragment;
+import com.xaehu.mvp_library.bean.KugouSearch;
+import com.xaehu.mvp_library.utils.ActivityUtils;
 import com.xaehu.myapplication.R;
 import com.xaehu.myapplication.adapter.SearchAdapter;
-import com.xaehu.myapplication.base.BaseConstant;
-import com.xaehu.myapplication.base.BaseFragment;
-import com.xaehu.myapplication.bean.KugouSearch;
-import com.xaehu.myapplication.presenter.SearchDetailPresenter;
 import com.xaehu.myapplication.presenter.SearchP;
-import com.xaehu.myapplication.utils.ActivityUtils;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,1 +1,1 @@
-include ':app'
+include ':app', ':mvp_library', ':home_module', ':search_module', ':detail_module', ':person_module'

@@ -4,17 +4,16 @@ import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 
 import com.flyco.tablayout.SlidingTabLayout;
+import com.xaehu.mvp_library.base.BaseStaticActivity;
 import com.xaehu.myapplication.R;
-import com.xaehu.myapplication.base.BaseActivity;
 import com.xaehu.myapplication.fragment.HomeFragment;
 import com.xaehu.myapplication.fragment.PersonFragment;
 import com.xaehu.myapplication.fragment.SearchDetailFragment;
 import com.xaehu.myapplication.fragment.SearchFragment;
-import com.xaehu.myapplication.presenter.MainPresenter;
 
 import java.util.ArrayList;
 
-public class MainActivity extends BaseActivity<MainPresenter> {
+public class MainActivity extends BaseStaticActivity {
 
     private ViewPager viewpager;
     private SlidingTabLayout tab;

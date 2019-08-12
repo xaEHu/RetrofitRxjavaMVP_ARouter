@@ -2,8 +2,8 @@ package com.xaehu.myapplication.fragment;
 
 import android.view.View;
 
+import com.xaehu.mvp_library.base.BaseFragment;
 import com.xaehu.myapplication.R;
-import com.xaehu.myapplication.base.BaseFragment;
 import com.xaehu.myapplication.presenter.PersonP;
 
 /**

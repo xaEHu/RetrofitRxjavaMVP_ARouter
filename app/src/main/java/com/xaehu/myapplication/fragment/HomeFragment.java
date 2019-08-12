@@ -6,10 +6,10 @@ import android.os.Build;
 import android.view.View;
 import android.widget.TextView;
 
+import com.xaehu.mvp_library.base.BaseFragment;
 import com.xaehu.myapplication.R;
 import com.xaehu.myapplication.activity.SearchActivity;
 import com.xaehu.myapplication.activity.SearchDetailActivity;
-import com.xaehu.myapplication.base.BaseFragment;
 import com.xaehu.myapplication.presenter.HomeP;
 
 import java.util.Objects;

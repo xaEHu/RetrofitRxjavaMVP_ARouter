@@ -1,9 +1,9 @@
 package com.xaehu.myapplication.presenter;
 
-import com.xaehu.myapplication.api.Api;
-import com.xaehu.myapplication.base.BaseConstant;
-import com.xaehu.myapplication.base.BasePresenter;
-import com.xaehu.myapplication.bean.KugouSearch;
+import com.xaehu.mvp_library.base.BasePresenter;
+import com.xaehu.mvp_library.api.Api;
+import com.xaehu.mvp_library.base.BaseConstant;
+import com.xaehu.mvp_library.bean.KugouSearch;
 import com.xaehu.myapplication.fragment.SearchFragment;
 
 import java.util.HashMap;

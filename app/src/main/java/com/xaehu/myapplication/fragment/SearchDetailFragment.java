@@ -10,12 +10,12 @@ import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.callback.ItemDragAndSwipeCallback;
 import com.xaehu.myapplication.R;
 import com.xaehu.myapplication.adapter.SearchDetailAdapter;
-import com.xaehu.myapplication.base.BaseConstant;
-import com.xaehu.myapplication.base.BaseFragment;
-import com.xaehu.myapplication.bean.KugouDetail;
+import com.xaehu.mvp_library.base.BaseConstant;
+import com.xaehu.mvp_library.base.BaseFragment;
+import com.xaehu.mvp_library.bean.KugouDetail;
 import com.xaehu.myapplication.presenter.SearchDetailP;
-import com.xaehu.myapplication.utils.ActivityUtils;
-import com.xaehu.myapplication.utils.StaticUtils;
+import com.xaehu.mvp_library.utils.ActivityUtils;
+import com.xaehu.mvp_library.utils.StaticUtils;
 
 import java.util.ArrayList;
 import java.util.List;
