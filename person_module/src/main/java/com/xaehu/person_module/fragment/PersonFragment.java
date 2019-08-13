@@ -2,6 +2,8 @@ package com.xaehu.person_module.fragment;
 
 import android.view.View;
 
+import com.alibaba.android.arouter.facade.annotation.Route;
+import com.xaehu.mvp_library.base.BaseArouter;
 import com.xaehu.mvp_library.base.BaseFragment;
 import com.xaehu.person_module.R;
 import com.xaehu.person_module.presenter.PersonP;
@@ -12,6 +14,7 @@ import com.xaehu.person_module.presenter.PersonP;
  * @date : 2019/7/9 11:51
  * @desc : 个人中心
  */
+@Route(path = BaseArouter.Person.PersonFragment)
 public class PersonFragment extends BaseFragment<PersonP> {
     @Override
     protected void initView(View view) {

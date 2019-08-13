@@ -6,11 +6,13 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.alibaba.android.arouter.facade.annotation.Route;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.callback.ItemDragAndSwipeCallback;
 import com.xaehu.detail_module.R;
 import com.xaehu.detail_module.adapter.SearchDetailAdapter;
 import com.xaehu.detail_module.presenter.SearchDetailP;
+import com.xaehu.mvp_library.base.BaseArouter;
 import com.xaehu.mvp_library.base.BaseConstant;
 import com.xaehu.mvp_library.base.BaseFragment;
 import com.xaehu.mvp_library.bean.KugouDetail;
@@ -26,6 +28,7 @@ import java.util.List;
  * @date : 2019/7/9 10:42
  * @desc : 详细搜索的fragment
  */
+@Route(path = BaseArouter.Detail.SearchDetailFragment)
 public class SearchDetailFragment extends BaseFragment<SearchDetailP> implements View.OnClickListener, BaseQuickAdapter.OnItemClickListener {
 
     private EditText editText;

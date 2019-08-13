@@ -1,4 +1,4 @@
-if (DETAIL_IS_APPLICATION.toBoolean()){
+if (MODULE_IS_APPLICATION.toBoolean()){
     apply plugin: 'com.android.application'
 }else {
     apply plugin: 'com.android.library'
@@ -7,7 +7,7 @@ android {
     compileSdkVersion 28
 
     defaultConfig {
-        if(DETAIL_IS_APPLICATION.toBoolean()){
+        if(MODULE_IS_APPLICATION.toBoolean()){
             applicationId "com.xaehu.detail_module"
         }
         minSdkVersion MIN_SDK_VERSION.toInteger()
@@ -17,11 +17,18 @@ android {
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
+        //阿里ARouter配置
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [AROUTER_MODULE_NAME: project.getName()]
+            }
+        }
+
     }
 
     sourceSets{
         main{
-            if(DETAIL_IS_APPLICATION.toBoolean()){
+            if(MODULE_IS_APPLICATION.toBoolean()){
                 manifest.srcFile 'src/main/AndroidManifest.xml'
             }else{
                 manifest.srcFile 'src/main/manifest/AndroidManifest.xml'
@@ -48,4 +55,5 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 
     api project(":mvp_library")
+    annotationProcessor 'com.alibaba:arouter-compiler:1.2.2'
 }

@@ -7,7 +7,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.alibaba.android.arouter.facade.annotation.Route;
 import com.chad.library.adapter.base.BaseQuickAdapter;
+import com.xaehu.mvp_library.base.BaseArouter;
 import com.xaehu.mvp_library.base.BaseConstant;
 import com.xaehu.mvp_library.base.BaseFragment;
 import com.xaehu.mvp_library.bean.KugouSearch;
@@ -25,6 +27,7 @@ import java.util.List;
  * @date : 2019/7/9 10:40
  * @desc : 搜索的Fragment
  */
+@Route(path = BaseArouter.Search.SearchFragment)
 public class SearchFragment extends BaseFragment<SearchP> implements View.OnClickListener {
     private EditText editText;
     private Button button;

@@ -9,6 +9,13 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        //阿里ARouter配置
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [AROUTER_MODULE_NAME: project.getName()]
+            }
+        }
     }
     buildTypes {
         release {
@@ -29,16 +36,11 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 
     api project(':mvp_library')
-    if(!HOME_IS_APPLICATION.toBoolean()){
+    annotationProcessor 'com.alibaba:arouter-compiler:1.2.2'
+    if(!MODULE_IS_APPLICATION.toBoolean()){
         implementation project(':home_module')
-    }
-    if(!SEARCH_IS_APPLICATION.toBoolean()){
         implementation project(':search_module')
-    }
-    if(!DETAIL_IS_APPLICATION.toBoolean()){
         implementation project(':detail_module')
-    }
-    if(!PERSON_IS_APPLICATION.toBoolean()){
         implementation project(':person_module')
     }
 }

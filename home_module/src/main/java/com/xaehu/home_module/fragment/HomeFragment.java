@@ -6,10 +6,13 @@ import android.os.Build;
 import android.view.View;
 import android.widget.TextView;
 
+import com.alibaba.android.arouter.facade.annotation.Route;
+import com.alibaba.android.arouter.launcher.ARouter;
 import com.xaehu.home_module.R;
 import com.xaehu.home_module.activity.SearchActivity;
 import com.xaehu.home_module.activity.SearchDetailActivity;
 import com.xaehu.home_module.presenter.HomeP;
+import com.xaehu.mvp_library.base.BaseArouter;
 import com.xaehu.mvp_library.base.BaseFragment;
 
 import java.util.Objects;
@@ -20,6 +23,7 @@ import java.util.Objects;
  * @date : 2019/7/9 10:27
  * @desc : 首页Fragment
  */
+@Route(path = BaseArouter.Home.HomeFragment)
 public class HomeFragment extends BaseFragment<HomeP> implements View.OnClickListener {
     private TextView tvMain;
     private TextView tvDetail;
@@ -48,12 +52,18 @@ public class HomeFragment extends BaseFragment<HomeP> implements View.OnClickLis
     @TargetApi(Build.VERSION_CODES.KITKAT)
     @Override
     public void onClick(View v) {
-        Intent intent = new Intent();
-        if(v == tvMain){
-            intent.setClass(Objects.requireNonNull(getActivity()), SearchActivity.class);
-        }else if(v == tvDetail){
-            intent.setClass(Objects.requireNonNull(getActivity()), SearchDetailActivity.class);
+//        Intent intent = new Intent();
+//        if(v == tvMain){
+//            intent.setClass(Objects.requireNonNull(getActivity()), SearchActivity.class);
+//        }else if(v == tvDetail){
+//            intent.setClass(Objects.requireNonNull(getActivity()), SearchDetailActivity.class);
+//        }
+//        startActivity(intent);
+
+        if(v == tvMain) {
+            ARouter.getInstance().build(BaseArouter.Home.SearchActivity).navigation();
+        }else{
+            ARouter.getInstance().build(BaseArouter.Home.SearchDetailActivity).navigation();
         }
-        startActivity(intent);
     }
 }

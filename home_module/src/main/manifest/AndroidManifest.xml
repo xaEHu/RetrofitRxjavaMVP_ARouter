@@ -3,7 +3,7 @@
     package="com.xaehu.home_module">
 
     <application>
-        <activity android:name=".activity.HomeActivity" />
+        <activity android:name=".activity.HomeMainActivity" />
         <activity android:name=".activity.SearchActivity" />
         <activity android:name=".activity.SearchDetailActivity" />
     </application>

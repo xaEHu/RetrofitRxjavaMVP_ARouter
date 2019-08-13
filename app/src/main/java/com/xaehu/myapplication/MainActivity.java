@@ -1,15 +1,12 @@
-package com.xaehu.myapplication.activity;
+package com.xaehu.myapplication;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 
+import com.alibaba.android.arouter.launcher.ARouter;
 import com.flyco.tablayout.SlidingTabLayout;
+import com.xaehu.mvp_library.base.BaseArouter;
 import com.xaehu.mvp_library.base.BaseStaticActivity;
-import com.xaehu.myapplication.R;
-import com.xaehu.myapplication.fragment.HomeFragment;
-import com.xaehu.myapplication.fragment.PersonFragment;
-import com.xaehu.myapplication.fragment.SearchDetailFragment;
-import com.xaehu.myapplication.fragment.SearchFragment;
 
 import java.util.ArrayList;
 
@@ -34,10 +31,10 @@ public class MainActivity extends BaseStaticActivity {
     public void initData() {
         setTitle(title[0]);
         ArrayList<Fragment> fragmentList = new ArrayList<>();
-        fragmentList.add(new HomeFragment());
-        fragmentList.add(new SearchFragment());
-        fragmentList.add(new SearchDetailFragment());
-        fragmentList.add(new PersonFragment());
+        fragmentList.add((Fragment) ARouter.getInstance().build(BaseArouter.Home.HomeFragment).navigation());
+        fragmentList.add((Fragment) ARouter.getInstance().build(BaseArouter.Search.SearchFragment).navigation());
+        fragmentList.add((Fragment) ARouter.getInstance().build(BaseArouter.Detail.SearchDetailFragment).navigation());
+        fragmentList.add((Fragment) ARouter.getInstance().build(BaseArouter.Person.PersonFragment).navigation());
         tab.setViewPager(viewpager,title,this, fragmentList);
 //        viewpager.setOffscreenPageLimit(4);
 

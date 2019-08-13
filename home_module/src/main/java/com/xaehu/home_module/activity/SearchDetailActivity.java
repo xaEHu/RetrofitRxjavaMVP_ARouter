@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.alibaba.android.arouter.facade.annotation.Route;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.callback.ItemDragAndSwipeCallback;
 import com.chad.library.adapter.base.listener.OnItemDragListener;
@@ -17,6 +18,7 @@ import com.xaehu.home_module.R;
 import com.xaehu.home_module.adapter.SearchDetailAdapter;
 import com.xaehu.home_module.presenter.SearchDetailPresenter;
 import com.xaehu.mvp_library.base.BaseActivity;
+import com.xaehu.mvp_library.base.BaseArouter;
 import com.xaehu.mvp_library.base.BaseConstant;
 import com.xaehu.mvp_library.bean.KugouDetail;
 import com.xaehu.mvp_library.utils.ActivityUtils;
@@ -29,6 +31,7 @@ import java.util.List;
  * @author xaeHu
  * 搜索详细数据界面
  */
+@Route(path = BaseArouter.Home.SearchDetailActivity)
 public class SearchDetailActivity extends BaseActivity<SearchDetailPresenter> implements View.OnClickListener, BaseQuickAdapter.OnItemClickListener {
 
     private EditText editText;

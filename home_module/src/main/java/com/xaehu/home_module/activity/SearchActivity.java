@@ -7,11 +7,13 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.alibaba.android.arouter.facade.annotation.Route;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.xaehu.home_module.R;
 import com.xaehu.home_module.adapter.SearchAdapter;
 import com.xaehu.home_module.presenter.SearchPresenter;
 import com.xaehu.mvp_library.base.BaseActivity;
+import com.xaehu.mvp_library.base.BaseArouter;
 import com.xaehu.mvp_library.base.BaseConstant;
 import com.xaehu.mvp_library.bean.KugouSearch;
 import com.xaehu.mvp_library.utils.ActivityUtils;
@@ -19,6 +21,11 @@ import com.xaehu.mvp_library.utils.ActivityUtils;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * @author xaeHu
+ */
+
+@Route(path = BaseArouter.Home.SearchActivity)
 public class SearchActivity extends BaseActivity<SearchPresenter> implements View.OnClickListener {
 
     private EditText editText;

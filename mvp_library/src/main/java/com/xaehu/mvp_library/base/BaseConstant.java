@@ -13,4 +13,8 @@ public class BaseConstant {
      * 列表每页请求数
      */
     public final static int PAGE_SIZE = 20;
+    /**
+     * 是否是debug模式
+     */
+    public final static boolean IS_DEBUG = true;
 }
